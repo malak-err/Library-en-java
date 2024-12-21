@@ -18,8 +18,7 @@ public class Main {
 
             System.out.print("Entrer la disponibilité (oui/non) : ");
             newBook.available = scanner.nextBoolean();
-            scanner.nextLine();  // To consume the newline character
-
+            scanner.nextLine(); 
             books.add(newBook);
             System.out.println("Livre ajouté avec succès.");
         }
@@ -46,14 +45,14 @@ public static void afficherbook(){
 
         boolean found = false;
         for (Book book : books) {
-            if (livre.equals(book.title)) {  // Use .equals() to compare strings
+            if (livre.equals(book.title)) { 
                 System.out.println("Livre trouvé :");
                 System.out.println("Titre: " + book.title);
                 System.out.println("Auteur: " + book.author);
                 System.out.println("ISBN: " + book.ISBN);
                 System.out.println("Disponible: " + (book.available ? "Oui" : "Non"));
                 found = true;
-                break;  // Exit the loop after finding the book
+                break; 
             }
         }
 
@@ -70,11 +69,11 @@ public static void afficherbook(){
 scanner.nextLine();
         boolean found = false;
         for (int i = 0; i < books.size(); i++) {
-            if (title.equals(books.get(i).title)) {  // Use .equals() for string comparison
-                books.remove(i);  // Remove the book directly by index
+            if (title.equals(books.get(i).title)) { 
+                books.remove(i);  
                 found = true;
                 System.out.println("Livre supprimé avec succès.");
-                break;  // Exit the loop after removing the book
+                break;
             }
         }
 
@@ -94,7 +93,7 @@ scanner.nextLine();
                 System.out.println("1: modifier le titre\n 2: modifierl'autheur\n 3: modifier la disponibilité ");
                 System.out.println("entrer votre choix");
                 int find=scanner.nextInt();      //hadi declaration diyal variable ghathez liya ra9 d choix dyl user
-                // dakchi li dkhel user
+               
                 switch(find){
                     case 1:
                         System.out.println("entrer le nouveau titre:");
